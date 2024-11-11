@@ -88,6 +88,12 @@ document.getElementById("copyButton").addEventListener("click", function () {
   showToast("Content copied to clipboard!");
 });
 
+document.getElementById("copyRedirect").addEventListener("click", function () {
+  showToast(
+    "Content copied to clipboard! & redirected to Santali Wiktionary..."
+  );
+});
+
 document.getElementById("resetButton").addEventListener("click", function () {
   showToast("Form has been reset.");
 });
