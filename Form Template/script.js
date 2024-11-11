@@ -29,8 +29,6 @@ function writeCode() {
     proipa +
     "}}\n" +
     "== English ==\n* " +
-    Sword +
-    "\n" +
     english +
     "\n" +
     "== ଓଡ଼ିଆ ==\n* " +
