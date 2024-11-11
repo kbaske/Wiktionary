@@ -23,7 +23,9 @@ function writeCode() {
     Smeaning +
     "\n" +
     "=== ᱥᱟᱰᱮ ===\n" +
+    "[[File:" +
     Saudio +
+    "]]" +
     "\n" +
     "=== ᱩᱪᱨᱟᱹᱲ ===\n{{Wt/sat/ᱩᱪᱨᱟᱹᱲ|" +
     proipa +
