@@ -6,6 +6,14 @@ body {
     text-align: center;
 }
 
+/* Styling the Header (Color, Font, Alignment) */
+.ancr {
+    text-decoration: inherit;
+}
+/* Styling the OlBaha (Color, Font, Alignment) */
+.olbaha {
+    color: deeppink;
+}
 /* Styling the Form (Color, Padding, Shadow) */
 form {
     background-color: #fff;
