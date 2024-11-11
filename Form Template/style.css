@@ -1,112 +1,210 @@
-/* Styling the Body element i.e. Color,
-		Font, Alignment */
+/* Styling the Body element - color, font, alignment */
 body {
-    background-color: #bff2a3;
-    font-family: Verdana;
+    background-color: #f0f4fc; /* Soft light blue background */
+    font-family: 'Arial', sans-serif;
     text-align: center;
+    color: #3a3a3a; /* Dark grey text for readability */
+    margin: 0;
+    padding: 0;
 }
 
-/* Styling the Header (Color, Font, Alignment) */
+/* Styling Links in Header */
 .ancr {
-    text-decoration: inherit;
-}
-/* Styling the OlBaha (Color, Font, Alignment) */
-.olbaha {
-    color: deeppink;
-}
-/* Styling the Form (Color, Padding, Shadow) */
-form {
-    background-color: #fff;
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px 20px;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #673ab7; /* Rich purple for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Styling form-control Class */
+.ancr:hover {
+    color: #4527a0; /* Darker purple on hover */
+}
+
+/* Styling OlBaha Text */
+.olbaha {
+    color: #ff4081; /* Vivid pink for emphasis */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Styling the Form */
+form {
+    background-color: #ffffff; /* White background for form */
+    max-width: 500px;
+    margin: 40px auto; /* Centered with balanced top and bottom margin */
+    padding: 30px 25px; /* Uniform padding for space inside form */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Styling form-control class */
 .form-control {
     text-align: left;
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Consistent bottom margin between controls */
 }
 
-/* Styling form-control Label */
+/* Styling Labels */
 .form-control label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Slightly increased for clarity */
+    font-weight: 600;
+    color: #3a3a3a; /* Dark grey for labels */
 }
 
-/* Styling form-control input,
-		select, textarea */
+/* Input and Select Fields */
 .form-control input,
 .form-control select {
-    border: 1.7px solid #777;
-    border-radius: 2px;
-    font-family: inherit;
-    padding: 12px;
+    border: 1.5px solid #cfd8dc; /* Soft grey border */
+    border-radius: 6px;
+    padding: 10px 12px; /* Reduced padding for a more compact appearance */
+    font-size: 1rem;
     display: block;
-    width: 90%;
+    width: calc(100% - 24px); /* Accounts for padding */
+    color: #3a3a3a;
 }
 
-/* Styling form-control Radio
-		button and Checkbox */
+.form-control input:focus,
+.form-control select:focus {
+    border-color: #5c6bc0; /* Muted purple on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 107, 192, 0.3);
+}
+
+/* Radio Button and Checkbox Styling */
 .form-control input[type="radio"],
 .form-control input[type="checkbox"] {
     display: inline-block;
     width: auto;
+    margin-right: 8px;
 }
 
-/* Styling Button */
+/* Styling Buttons */
 button {
-    background-color: #05c46b;
-    border: 1px solid #777;
-    border-radius: 2px;
-    font-family: inherit;
-    font-size: 21px;
-    display: block;
+    background-color: #00bfa5; /* Minty teal button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 0; /* Balanced padding */
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin: 30px 0 20px; /* Added consistent top and bottom spacing */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #00897b; /* Darker teal on hover */
+}
 
-.form-control-inputB input
- {
-    background-color: #05c46b;
-    border: 1px solid rgb(252, 242, 242);
-    border-radius: 2px;
+/* Styling Input Fields inside form-control-inputB */
+.form-control-inputB input {
+    background-color: #00bfa5; /* Minty teal background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
     font-family: inherit;
     padding: 10px;
     display: block;
-    width: 40%;
-    margin-left: 30%;
+    width: 60%;
+    margin: 10px auto; /* Centered with balanced margin */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.form-control-inputB input:hover {
+    background-color: #00897b; /* Darker teal on hover */
+}
+
+/* Styling Textarea */
 .form-control textarea {
-    background-color: rgba(9, 245, 131, 0.1);
-    border: 1px solid #777;
-    border-radius: 3px;
-    font-family: inherit;
-    padding: 10px;
+    background-color: #e3f2fd; /* Light pastel blue */
+    border: 1.5px solid #cfd8dc; /* Soft grey border */
+    border-radius: 5px;
+    padding: 12px;
     display: block;
-    width: 95%;
-    height: 300px;
+    width: calc(100% - 24px); /* Accounts for padding */
+    height: 200px;
+    font-family: inherit;
+    color: #3a3a3a;
+    resize: vertical;
 }
 
+/* Homei Banner */
 .homei {
     text-align: center;
-    padding: 0.1rem;
-    background-color: bisque;
-    margin-bottom: 0.1rem;
-    font-size: 1.2rem;
-  }
+    padding: 0.5rem; /* Increased padding for balance */
+    background-color: #d1c4e9; /* Soft lavender */
+    font-size: 1.3rem;
+    color: #3a3a3a;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
 
-  .form-control-reset input{
-    background-color: #05c46b;
-    border: 1px solid rgb(252, 242, 242);
-    border-radius: 2px;
+/* Reset Button Styling */
+.form-control-reset input {
+    background-color: #ff5252; /* Bright coral red */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
     font-family: inherit;
     padding: 10px;
     display: block;
     width: 40%;
-    margin-left: 30%;
-  }
+    margin: 15px auto; /* Centered with balanced margin */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.form-control-reset input:hover {
+    background-color: #d32f2f; /* Darker coral red on hover */
+}
+
+/* Toast container styling */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Toast message styling */
+.toast {
+    min-width: 200px;
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
+}
+
+/* Slide in and fade out animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
