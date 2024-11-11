@@ -28,7 +28,7 @@ function writeCode() {
     "=== ᱩᱪᱨᱟᱹᱲ ===\n{{Wt/sat/ᱩᱪᱨᱟᱹᱲ|" +
     proipa +
     "}}\n" +
-    "== English ==\n{{Wt/sat/trans-top|" +
+    "== English ==\n" +
     Sword +
     "}}\n* " +
     english +
@@ -45,9 +45,11 @@ function writeCode() {
     "== অসমীয়া ==\n* " +
     assamese +
     "\n" +
-    "{{Wt/sat/trans-bottom}}\n" +
     "== ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ==\n" +
     "* Campbell, A.; Macphail, R.M. (1984). Campbell's English-Santali Dictionary. Eastern Books. ISBN 978-0-8364-1137-9.\n" +
+    "* Campbell, A. (1899). A Santali-English dictionary. Santal Mission Press.\n" +
+    "* Mrs. Maina Tudu (Hansdah). (2016) SANTALI DICTIONARY, Olchiki-Olchiki-English script. ISBN 978-93-5267-534-0 \n" +
+    "* P.O. BODDING. SANTALI DICTIONARY (1929) \n" +
     "[[Category:Wt/sat/" +
     firstC +
     "]]\n";
@@ -89,3 +91,19 @@ document.getElementById("copyButton").addEventListener("click", function () {
 document.getElementById("resetButton").addEventListener("click", function () {
   showToast("Form has been reset.");
 });
+
+// Redirect Url function
+function redirectToWebsite() {
+  // Redirect Url
+  const baseUrl = "https://incubator.wikimedia.org/w/index.php?title=Wt/sat/";
+  const Sword = document.getElementById("Sword").value;
+  const editUrl = "&action=edit";
+  const redirectUrl = baseUrl + encodeURIComponent(Sword) + editUrl;
+  window.open(redirectUrl, "_blank");
+}
+
+// Event listener button added using Copy & Redirect functions
+document.getElementById("copyRedirect").onclick = function () {
+  copy();
+  redirectToWebsite();
+};

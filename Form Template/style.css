@@ -102,6 +102,12 @@ button:hover {
     background-color: #00897b; /* Darker teal on hover */
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* Center buttons in the container */
+    gap: 10px; /* Spacing between buttons */
+}
+
 /* Styling Input Fields inside form-control-inputB */
 .form-control-inputB input {
     background-color: #00bfa5; /* Minty teal background */

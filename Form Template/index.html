@@ -46,7 +46,7 @@
 
     <!-- English -->
     <div class="form-control">
-      <label for="english" id="label-name">English (mandatory - add commas to add multiple words)</label>
+      <label for="english" id="label-name">English (Optional) - add commas to add multiple words</label>
       <input type="text" id="english" placeholder="English Word" />
     </div>
 
@@ -83,7 +83,10 @@
     <!-- Buttons -->
     <div class="form-control-inputB">
       <input type="button" value="Create" id="createButton" onclick="writeCode();" />
-      <input type="button" value="Copy" id="copyButton" onclick="copy()" />
+      <div class="button-container">
+        <input type="button" value="Copy" id="copyButton" onclick="copy()" />
+        <input type="button" value="Copy & Go Wiktionary" id="copyRedirect" />
+      </div>
       <input type="button" name="reset_form" value="Reset Form" id="resetButton" onclick="this.form.reset(); updateFirstCharacter();" />
     </div>
 
