@@ -73,6 +73,48 @@ body {
   color: red;
 }
 
+/* Mobile View */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar ul li a,
+  .navbar ul li button {
+    padding: 1rem;
+  }
+}
+
 /* Search Section */
 .search-section {
   max-width: 500px;
@@ -136,96 +178,3 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
-/* Responsive Styles */
-/* Basic Navigation Bar */
-.navbar nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar nav ul li {
-  margin: 0 1rem;
-}
-
-.navbar nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-}
-
-.navbar nav ul li a:hover {
-  background: #555;
-  border-radius: 4px;
-}
-
-/* Dropdown Menu Styles */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: #444;
-  padding: 1rem 0;
-  margin-top: 0.5rem;
-  border-radius: 4px;
-  z-index: 1000;
-}
-
-.dropdown-menu a {
-  color: white;
-  padding: 0.5rem 1rem;
-  display: block;
-}
-
-.dropdown-menu a:hover {
-  background: #555;
-}
-
-/* Hamburger Button (Hidden for Desktop) */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Mobile Menu Styles */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .navbar nav {
-    display: none;
-    flex-direction: column;
-    background: #333;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    z-index: 1000;
-  }
-
-  .navbar nav.active {
-    display: flex;
-  }
-
-  .navbar nav ul {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .navbar nav ul li {
-    margin: 0;
-  }
-
-  .navbar nav ul li a {
-    padding: 1rem;
-  }
-}
-
