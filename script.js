@@ -54,3 +54,34 @@ function loadDatalist() {
 }
 
 document.addEventListener("DOMContentLoaded", loadDatalist);
+
+// Toggle Mobile Menu
+function toggleMobileMenu() {
+  const navbar = document.querySelector(".navbar nav");
+  navbar.classList.toggle("active");
+}
+
+// Toggle Dropdown Menu
+function toggleDropdown(event) {
+  event.preventDefault(); // Prevent default link behavior
+  const dropdownMenu = document.getElementById("list-items");
+  if (dropdownMenu.style.display === "block") {
+    dropdownMenu.style.display = "none";
+  } else {
+    dropdownMenu.style.display = "block";
+  }
+}
+
+// Close Dropdown on Outside Click
+document.addEventListener("click", function (event) {
+  const dropdownMenu = document.getElementById("list-items");
+  const dropdownButton = document.querySelector(".dropdown-btn");
+
+  if (
+    dropdownMenu.style.display === "block" &&
+    !dropdownMenu.contains(event.target) &&
+    !dropdownButton.contains(event.target)
+  ) {
+    dropdownMenu.style.display = "none";
+  }
+});
