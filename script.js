@@ -1,33 +1,31 @@
-// Toggle mobile menu
-function toggleMobileMenu() {
-  const menu = document.getElementById("mobileMenu");
-  menu.classList.toggle("open");
-}
+const menuToggle = document.getElementById("menu-toggle"); // Hamburger icon
+const mobileMenu = document.getElementById("mobile-menu"); // Mobile menu
+const closeMenu = document.getElementById("close-menu"); // Close button
+const overlay = document.getElementById("overlay"); // Overlay
 
-// Toggle dropdown menu
-function toggleMenu() {
-  const dropdown = document.getElementById("list-items");
-  dropdown.style.display =
-    dropdown.style.display === "block" ? "none" : "block";
-}
-
-// Close dropdown menu
-function closeMenu() {
-  document.getElementById("list-items").style.display = "none";
-}
-
-// Close dropdown when clicking outside
-document.addEventListener("click", function (event) {
-  const dropdown = document.getElementById("list-items");
-  const button = document.querySelector(".dropdown-btn");
-  if (
-    dropdown.style.display === "block" &&
-    !dropdown.contains(event.target) &&
-    !button.contains(event.target)
-  ) {
-    closeMenu();
-  }
+// Open Menu
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+  overlay.classList.add("active");
 });
+
+// Close Menu (using close button)
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+// Close Menu (on clicking outside)
+overlay.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+function toggleDropdown(event) {
+  event.preventDefault(); // Prevent link navigation
+  const parentDropdown = event.target.parentElement;
+  parentDropdown.classList.toggle("open");
+}
 
 // Perform word search
 function basicSearch() {
@@ -44,19 +42,3 @@ function basicSearch() {
   }
   return false;
 }
-
-// Load datalist options
-function loadDatalist() {
-  fetch("ᱥᱟᱱᱛᱟᱲᱤ.txt")
-    .then((response) => response.text())
-    .then((data) => {
-      const options = data
-        .split("\n")
-        .map((word) => `<option value="${word.trim()}"></option>`)
-        .join("");
-      document.getElementById("santaliwt").innerHTML = options;
-    })
-    .catch((error) => console.error("Failed to load datalist:", error));
-}
-
-document.addEventListener("DOMContentLoaded", loadDatalist);
