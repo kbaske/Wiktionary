@@ -1,75 +1,58 @@
-<!-- https://www.w3schools.com/HOWTO/howto_html_include.asp -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ᱣᱤᱠᱤ ᱟᱹᱲᱟᱹ ᱢᱩᱨᱟᱹᱭ</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<title>ᱥᱮᱱᱫᱽᱨᱟᱭ ᱢᱮ</title>
 
 <body>
+  <header class="navbar">
+    <h1 class="logo">ᱣᱤᱠᱤ ᱟᱹᱲᱟᱹ ᱢᱩᱨᱟᱹᱭ</h1>
+    <nav>
+      <ul>
+        <li><a href="/">ᱚᱲᱟᱜ</a></li>
+        <li><a href="/README.md">ᱟᱞᱮ ᱵᱟᱵᱚᱛ</a></li>
+        <li class="dropdown">
+          <button class="dropdown-btn" onclick="toggleMenu()">ᱥᱟᱯᱟᱵ ᱠᱚ</button>
+          <div id="list-items" class="dropdown-content">
+            <span class="close-btn" onclick="closeMenu()">✖</span>
+            <a href="check if page exists or not/index.html">Check Word</a>
+            <a href="Santali Dictionary or Translation/index.html">Dictionary/Translation Search</a>
+            <a href="Page Template/index.html">Interactive Form Template</a>
+            <a href="Form Template/index.html">Form Template</a>
+            <a href="SN Template/index.html">SN Template</a>
+            <a href="Mymemory/mymemory.html">Mymemory</a>
+            <a href="Santali Psedo TTS/index.html">Santali TTS</a>
+          </div>
+        </li>
+        <li><a href="#">ᱥᱟᱹᱜᱟᱹᱭ ᱞᱮᱯᱮ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-
-        <div class="dropdown">
-            <button onclick="show_hide()" class="buttonD">More Tools</button>
-            <!-- dropdown list items will show when we click the drop button -->
-            <div id="list-items">
-                <a href="check if page exists or not/index.html">Check Word (If already present)</a>
-                <a href="Santali Dictionary or Translation/index.html">Dictionary/Translation Search</a>
-                <a href="Page Template/index.html">Interactive Form Template</a>
-                <a href="Form Template/index.html">Form Template</a>
-                <a href="SN Template/index.html">SN Template</a>
-                <a href="Mymemory/mymemory.html">Mymemory</a>
-                <a href="Santali Psedo TTS/index.html">Santali TTS</a>
-
-
-            </div>
+  <main>
+    <section class="search-section">
+      <h2>ᱣᱤᱠᱤ ᱟᱹᱲᱟᱹ ᱢᱩᱨᱟᱹᱭ ᱨᱮ ᱥᱮᱸᱫᱽᱨᱟ</h2>
+      <form name="basicForm" onSubmit="return basicSearch();">
+        <div class="form-control">
+          <label for="searchterms">ᱟᱹᱲᱟᱹ ᱚᱞ ᱢᱮ:</label>
+          <input type="text" id="searchterms" name="searchterms" list="santaliwt" placeholder="ᱱᱚᱰᱮ ᱟᱢᱟᱜ ᱟᱹᱲᱟᱹ ᱚᱞ ᱢᱮ" />
+          <datalist id="santaliwt"></datalist>
         </div>
+        <button type="submit" class="submit-btn">ᱥᱮᱸᱫᱽᱨᱟ</button>
+        <input type="button" class="reset-btn" value="ᱤᱬᱤᱡᱽ ᱢᱮ" onclick="this.form.reset();" />
+      </form>
+    </section>
+  </main>
 
+  <footer>
+    <p>© 2024 Santali Tools. All Rights Reserved.</p>
+  </footer>
 
-        <form name="basicForm" onSubmit="return basicSearch();">
-            <div class="form-control">
-                <label for="formGroupExampleInput" id="label-name">
-                    SWIncubator Word Search
-                </label>
-    
-                <!-- Input Type Text -->
-                <input type="text"
-                name="searchterms"
-                list="santaliwt" 
-                    id="name"
-                    class="form-control"
-                    placeholder="Enter your name" />
-
-                <!-- your datalist -->
-                <datalist id="santaliwt">
-                </datalist>
-                <!-- your datalist -->
-                
-            </div>
-            <div>
-            <button type="submit" name="SearchSubmit" value="Search" class="submits">ᱥᱮᱱᱫᱽᱨᱟ</button>
-            </div>
-            <div class="form-control-inputB">
-            <input type="button" name="reset_form"  value="ᱨᱤᱥᱮᱴ ᱢᱮ" onclick="this.form.reset();">
-            </div>
-            
-        </form>
-
-
-
-
-
-
-    <script src="script.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-
+  <script src="script.js"></script>
 </body>
 
 </html>
