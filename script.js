@@ -1,7 +1,7 @@
 // Toggle mobile menu
 function toggleMobileMenu() {
-  const navbarMenu = document.querySelector(".navbar ul");
-  navbarMenu.classList.toggle("active");
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("open");
 }
 
 // Toggle dropdown menu
